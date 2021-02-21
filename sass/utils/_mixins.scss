@@ -33,5 +33,12 @@
 @mixin font($fs: 14px, $fw: 400, $lh: 24px) {
   font-size: $fs;
   font-weight: $fw;
-  line-height: decimal-round($lh/$fs, 2);
+  line-height: decimal-round($lh/$fs, 3);
+}
+
+@mixin flex($d: flex, $jc: flex-start, $ai: stretch, $fd: row) {
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
 }

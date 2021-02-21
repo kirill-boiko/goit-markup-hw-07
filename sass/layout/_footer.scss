@@ -1,5 +1,5 @@
 .footer {
-  background: var(--bg-black-color);
+  background: var(--bg-dark-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -18,7 +18,7 @@
   }
 
   & .maps {
-    color: var(--primary-white-color);
+    color: var(--primary-lite-color);
 
     text-decoration: none;
     font-style: normal;
@@ -43,8 +43,7 @@
 }
 
 .footer-social-list {
-  display: flex;
-  justify-content: space-between;
+  @include flex($jc: space-between);
 }
 
 .footer-social-item {
@@ -53,19 +52,18 @@
 }
 
 .footer-social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($jc: center, $ai: center);
+
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--primary-white-color);
+  fill: var(--primary-lite-color);
   transition: background-color 250ms var(--timing-function),
     fill 250ms var(--timing-function);
   &:focus,
   &:hover {
-    fill: var(--primary-white-color);
+    fill: var(--primary-lite-color);
     background-color: var(--accent-color);
   }
 }
@@ -76,7 +74,7 @@
   line-height: 1.14;
   text-transform: uppercase;
 
-  color: var(--primary-white-color);
+  color: var(--primary-lite-color);
 }
 
 /* =====footer submit===== */
@@ -88,8 +86,7 @@
 }
 
 .footer-form {
-  display: flex;
-  justify-content: space-between;
+  @include flex($jc: space-between);
 }
 
 .footer-input {
